@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Traversa · Trattoria nel centro di Salerno</title>
+<meta name="description" content="La Traversa, trattoria nel centro storico di Salerno: cucina di casa, vino della casa e musica dal vivo con la chitarra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2230; --ink-2:#4b4f58; --cream:#f5ecdc; --paper:#fbf6ee;
+  --terra:#b4442a; --terra-d:#8e3420; --lemon:#e8b84a; --sea:#2f5d73;
+  --line:rgba(27,34,48,.12); --r:18px;
+  --serif:'Fraunces',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacing:-.015em}
+.eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-terra{background:var(--terra);color:#fff}.btn-terra:hover{background:var(--terra-d)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+
+.band{background:var(--ink);color:#e9dcc6;font-size:.78rem;text-align:center;padding:7px 12px;letter-spacing:.04em}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mono{width:40px;height:40px;border-radius:12px;background:var(--terra);display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#fff;font-size:1.05rem;transform:rotate(-4deg)}
+.logo b{font-family:var(--serif);font-size:1.35rem;font-weight:700;display:block;line-height:1}
+.logo small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.links{display:flex;gap:26px;font-size:.9rem}
+.links a{text-decoration:none;color:var(--ink-2)}.links a:hover{color:var(--terra)}
+nav .btn{padding:10px 18px;font-size:.86rem}
+@media(max-width:860px){.links{display:none}}
+
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,20,30,.3) 0%,rgba(16,20,30,.35) 40%,rgba(16,20,30,.9) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:70px;width:100%}
+.hero .eyebrow{color:var(--lemon)}
+.hero h1{font-size:clamp(3rem,8.5vw,6.4rem);margin:14px 0 18px;max-width:920px}
+.hero h1 em{font-style:italic;color:var(--lemon)}
+.hero p.lead{font-size:clamp(1rem,1.6vw,1.2rem);max-width:580px;color:#eee5d6}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.scores{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap}
+.score{display:flex;align-items:center;gap:10px;font-size:.88rem;color:#eee5d6}
+.score strong{font-family:var(--serif);font-size:2rem;color:#fff;font-weight:600}
+.stars{color:var(--lemon);letter-spacing:2px}
+
+.ribbon{background:var(--terra);color:#fbe9cf;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:var(--serif);font-size:1.35rem;font-style:italic}
+.ribbon div{display:inline-block;animation:mq 38s linear infinite}
+.ribbon span{margin:0 26px}.ribbon i{color:var(--lemon);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.sec-head{max-width:640px;margin-bottom:54px}
+.sec-head h2{font-size:clamp(2.3rem,4.6vw,3.6rem);margin-top:12px}
+.sec-head p{color:var(--ink-2);margin-top:16px;font-size:1.05rem}
+
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+.about .pics{position:relative;height:580px}
+.about .pics img{position:absolute;border-radius:var(--r);object-fit:cover;box-shadow:0 30px 60px -25px rgba(0,0,0,.35)}
+.about .p1{width:62%;height:86%;top:0;left:0}
+.about .p2{width:58%;height:48%;right:0;bottom:0;border:8px solid var(--paper)}
+.about h2{font-size:clamp(2.3rem,4.4vw,3.4rem);margin:12px 0 22px}
+.about p{color:var(--ink-2);margin-bottom:16px;font-size:1.04rem}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.fact{border-top:1px solid var(--line);padding-top:14px}
+.fact b{font-family:var(--serif);font-size:1.9rem;color:var(--terra);display:block;line-height:1}
+.fact span{font-size:.82rem;color:var(--ink-2)}
+.placeholder{background:#fff4d6;border-left:3px solid var(--lemon);padding:10px 14px;font-size:.88rem;border-radius:6px;color:#6b5320}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:40px}.about .pics{height:440px}}
+
+/* musica */
+.feature{background:var(--ink);color:#eee5d6;position:relative;overflow:hidden}
+.feature::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(232,184,74,.18);box-shadow:0 0 0 60px rgba(232,184,74,.03),0 0 0 120px rgba(232,184,74,.02)}
+.feature .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.feature .eyebrow{color:var(--lemon)}
+.feature h2{font-size:clamp(2.5rem,5vw,4rem);color:#fff;margin:12px 0 22px}
+.feature h2 em{color:var(--lemon)}
+.feature p{color:#c9c3b8;font-size:1.05rem}
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+.way{border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px 18px;transition:background .25s,border-color .25s}
+.way:hover{background:rgba(255,255,255,.05);border-color:var(--lemon)}
+.way b{font-family:var(--serif);font-size:1.3rem;color:#fff;display:block}
+.way span{font-size:.84rem;color:#a39f97}
+.feature .img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;position:relative}
+.feature .img img{width:100%;height:100%;object-fit:cover}
+.eq{position:absolute;left:18px;bottom:18px;display:flex;gap:4px;align-items:flex-end;height:34px;background:rgba(16,20,30,.6);padding:8px 12px;border-radius:999px;backdrop-filter:blur(6px)}
+.eq i{width:4px;background:var(--lemon);border-radius:2px;animation:eq 1.1s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.45s}.eq i:nth-child(4){animation-delay:.1s}.eq i:nth-child(5){animation-delay:.6s}
+.eq span{font-size:.78rem;color:#fff;margin-left:8px;align-self:center}
+@keyframes eq{0%,100%{height:5px}50%{height:18px}}
+@media(max-width:900px){.feature .grid{grid-template-columns:1fr}.feature .img{aspect-ratio:4/3}}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:34px}
+.tab{padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:transparent;font:500 .92rem var(--sans);cursor:pointer;color:var(--ink-2)}
+.tab[aria-selected=true]{background:var(--terra);border-color:var(--terra);color:#fff}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:0 60px}
+.panel.on{display:grid;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.dish{display:flex;justify-content:space-between;gap:18px;padding:20px 0;border-bottom:1px dashed var(--line)}
+.dish h3{font-size:1.4rem}
+.dish p{font-size:.9rem;color:var(--ink-2);margin-top:4px}
+.tag{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);font-weight:600;white-space:nowrap;padding-top:6px}
+.note{font-size:.82rem;color:var(--ink-2);margin-top:26px;font-style:italic}
+@media(max-width:760px){.panel.on{grid-template-columns:1fr}}
+
+.gallery{background:var(--cream)}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.strip figure{flex:0 0 min(78vw,380px);scroll-snap-align:start;border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:3/4;min-width:0}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.strip figure:hover img{transform:scale(1.05)}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-family:var(--serif);font-size:1.3rem}
+.arrows{display:flex;gap:10px;margin-top:20px}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:1.1rem}
+
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.rev .stars{color:var(--lemon);margin-bottom:12px}
+.rev h3{font-size:1.4rem;margin-bottom:10px}
+.rev p{color:var(--ink-2);font-size:.95rem}
+.rev small{display:block;margin-top:16px;font-size:.78rem;color:#8b8579}
+.world{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:.88rem;color:var(--ink-2)}
+.world span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+@media(max-width:900px){.revs{grid-template-columns:1fr}}
+
+.info{background:var(--ink);color:#eee5d6}
+.info .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:34px}
+.card h2{color:#fff;font-size:2.4rem;margin-bottom:18px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.08);margin-bottom:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:#999}
+.dot.open{background:#5fbf72;box-shadow:0 0 0 4px rgba(95,191,114,.2)}.dot.closed{background:#d06a5c}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+td:last-child{text-align:right;color:#c9c3b8}
+tr.today td{color:var(--lemon);font-weight:600}
+.addr{font-size:1.05rem;margin-bottom:8px;color:#fff}
+.muted{color:#a39f97;font-size:.9rem}
+.info .btn{margin-top:22px}
+.map{margin-top:22px;border-radius:14px;height:180px;background:
+  radial-gradient(circle at 48% 52%,var(--terra) 0 7px,transparent 8px),
+  radial-gradient(circle at 48% 52%,rgba(180,68,42,.28) 0 26px,transparent 27px),
+  linear-gradient(180deg,transparent 0 72%,rgba(47,93,115,.55) 72%),
+  repeating-linear-gradient(15deg,rgba(255,255,255,.05) 0 2px,transparent 2px 38px),
+  repeating-linear-gradient(-75deg,rgba(255,255,255,.05) 0 2px,transparent 2px 52px),#262d3a;display:flex;align-items:flex-end;padding:14px;font-size:.8rem;color:#c9c3b8}
+@media(max-width:900px){.info .grid{grid-template-columns:1fr}}
+
+.book{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-size:.8rem;font-weight:600;color:var(--ink-2);display:flex;flex-direction:column;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.full{grid-column:1/-1}
+.msg{grid-column:1/-1;font-size:.86rem;padding:10px 14px;border-radius:10px;display:none}
+.msg.err{display:block;background:#fbe6e3;color:#8a2a1f}
+.msg.ok{display:block;background:#e6f3e8;color:#28623a}
+@media(max-width:900px){.book{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+footer{background:#121722;color:#8b8579;padding:50px 0 120px;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:#eee5d6;font-family:var(--serif);font-size:1.3rem}
+
+.mbar{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;gap:10px}
+.mbar a{flex:1;justify-content:center}
+.mbar .call{background:#fff;color:var(--ink);border:1px solid var(--line)}
+@media(max-width:760px){.mbar{display:flex}.hero .wrap{padding-bottom:110px}.hero{min-height:92vh}}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="band">Anteprima del nuovo sito · bozza riservata per La Traversa · foto illustrative</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mono">LT</span><span><b>La Traversa</b><small>Trattoria · Salerno</small></span></a>
+    <div class="links"><a href="#trattoria">La trattoria</a><a href="#musica">Musica dal vivo</a><a href="#menu">Menu</a><a href="#orari">Orari</a></div>
+    <a class="btn btn-terra" href="#prenota">Prenota</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img src="img/hero.webp" alt="Tavolata di amici che brindano in trattoria">
+  <div class="wrap">
+    <span class="eyebrow">Trattoria · Centro storico di Salerno</span>
+    <h1>Cucina di casa,<br><em>chitarra e buon vino.</em></h1>
+    <p class="lead">In una traversa a due passi dal corso: polpette al sugo, parmigiana, pasta come la fa mamma e un calice di rosso della casa. E a volte, tra un piatto e l'altro, parte una canzone.</p>
+    <div class="cta">
+      <a class="btn btn-terra" href="#prenota">Prenota un tavolo</a>
+      <a class="btn btn-ghost" href="#menu">Scopri il menu</a>
+    </div>
+    <div class="scores">
+      <div class="score"><strong>4,7</strong><span><span class="stars">★★★★★</span><br>oltre 1.700 recensioni Google</span></div>
+      <div class="score"><strong>4,6</strong><span><span class="stars">★★★★★</span><br>131 recensioni Tripadvisor</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon" aria-hidden="true"><div>
+  <span>Polpette al sugo</span><i>✦</i><span>'A parmigiana 'e mulignane</span><i>✦</i><span>Pacchero ripieno</span><i>✦</i><span>Alici imbottite</span><i>✦</i><span>Gnocchi</span><i>✦</i><span>Scarpariello</span><i>✦</i><span>Rosso della casa</span><i>✦</i>
+  <span>Polpette al sugo</span><i>✦</i><span>'A parmigiana 'e mulignane</span><i>✦</i><span>Pacchero ripieno</span><i>✦</i><span>Alici imbottite</span><i>✦</i><span>Gnocchi</span><i>✦</i><span>Scarpariello</span><i>✦</i><span>Rosso della casa</span><i>✦</i>
+</div></div>
+
+<section id="trattoria">
+  <div class="wrap about">
+    <div class="pics rv">
+      <img class="p1" src="img/sala.webp" alt="Sala con archi in pietra e luci calde">
+      <img class="p2" src="img/tavolata.webp" alt="Tavola condivisa con piatti della tradizione">
+    </div>
+    <div class="rv">
+      <span class="eyebrow">La trattoria</span>
+      <h2>Fuori dal corso,<br>dentro Salerno.</h2>
+      <p>La Traversa sta in Via Ruggi d'Aragona, in un vicolo del centro storico, a pochi passi dal passeggio. Una trattoria semplice e accogliente, dove si viene per mangiare bene senza spendere troppo.</p>
+      <p>In tavola arrivano i piatti della cucina campana di tutti i giorni: polpette, parmigiana, peperoni e alici imbottiti, pasta al sugo. Il servizio è veloce e alla mano, con chi è di casa e con chi arriva da lontano.</p>
+      <p class="placeholder">✎ Spazio per la vostra storia: da quando siete aperti, chi c'è in cucina e in sala, perché il nome "La Traversa".</p>
+      <div class="facts">
+        <div class="fact"><b>1.700+</b><span>recensioni Google</span></div>
+        <div class="fact"><b>Live</b><span>musica con la chitarra</span></div>
+        <div class="fact"><b>€</b><span>prezzi da trattoria</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="musica">
+  <div class="wrap grid">
+    <div class="rv">
+      <span class="eyebrow">Musica dal vivo</span>
+      <h2>Si mangia<br><em>con una canzone.</em></h2>
+      <p>È la cosa che gli ospiti ricordano di più: un chitarrista passa tra i tavoli e canta i classici della canzone italiana e napoletana. A pranzo l'atmosfera è tranquilla e romantica, la sera la sala si riempie e si canta tutti insieme.</p>
+      <div class="ways">
+        <div class="way"><b>Chitarra acustica</b><span>dal vivo, tra i tavoli</span></div>
+        <div class="way"><b>Canzoni classiche</b><span>italiane e napoletane</span></div>
+        <div class="way"><b>Per le coppie</b><span>cene e anniversari</span></div>
+        <div class="way"><b>Quando suona</b><span>giorni e orari da confermare</span></div>
+      </div>
+    </div>
+    <div class="img rv"><img src="img/sera.webp" alt="Angolo della sala la sera, con luce calda (foto illustrativa)"><div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><span>Live stasera</span></div></div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Il menu</span>
+      <h2>I piatti che tutti nominano</h2>
+      <p>Un menu corto, fatto di cose di casa. Chiedete sempre in sala i piatti del giorno.</p>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-p="p1">Antipasti e secondi</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p2">Primi</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p3">Dolci e vino</button>
+    </div>
+    <div class="panel on" id="p1">
+      <div class="dish"><div><h3>Polpette al sugo</h3><p>Cotte lentamente nel pomodoro, con il pane per la scarpetta</p></div><span class="tag">Il più amato</span></div>
+      <div class="dish"><div><h3>Parmigiana di melanzane</h3><p>'A parmigiana 'e mulignane, come da tradizione</p></div><span class="tag">Tradizione</span></div>
+      <div class="dish"><div><h3>Peperoni imbottiti</h3><p>Ripieni e cotti al forno</p></div><span class="tag">Della casa</span></div>
+      <div class="dish"><div><h3>Alici imbottite</h3><p>Il pesce azzurro del golfo</p></div><span class="tag">Di mare</span></div>
+    </div>
+    <div class="panel" id="p2">
+      <div class="dish"><div><h3>La pasta di mamma</h3><p>Al ragù, la ricetta di casa</p></div><span class="tag">Firma</span></div>
+      <div class="dish"><div><h3>Pacchero ripieno</h3><p>Il formato campano, farcito e passato al forno</p></div><span class="tag">Da provare</span></div>
+      <div class="dish"><div><h3>Gnocchi</h3><p>Al pomodoro e basilico</p></div><span class="tag"></span></div>
+      <div class="dish"><div><h3>Scarpariello</h3><p>Pomodorino, formaggio e basilico</p></div><span class="tag">Tradizione</span></div>
+      <div class="dish"><div><h3>Pasta e ceci</h3><p>Il piatto di legumi della casa</p></div><span class="tag">Vegano</span></div>
+      <div class="dish"><div><h3>Pasta senza glutine</h3><p>Su richiesta, da segnalare al momento della prenotazione</p></div><span class="tag">Da confermare</span></div>
+    </div>
+    <div class="panel" id="p3">
+      <div class="dish"><div><h3>Cannolo alla pera</h3><p>Il dolce citato da tanti ospiti</p></div><span class="tag">Da non perdere</span></div>
+      <div class="dish"><div><h3>Dolce del giorno</h3><p>Fatto in casa</p></div><span class="tag"></span></div>
+      <div class="dish"><div><h3>Rosso della casa</h3><p>Al calice o in caraffa, servito con generosità</p></div><span class="tag">Vino</span></div>
+      <div class="dish"><div><h3>Limoncello</h3><p>Per chiudere in dolcezza</p></div><span class="tag">Digestivo</span></div>
+    </div>
+    <p class="note">Menu indicativo, ricostruito dai piatti citati dagli ospiti. Prezzi, allergeni e carta dei vini saranno inseriti con il menu ufficiale.</p>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">In tavola</span><h2>Prima si guarda, poi si fa la scarpetta</h2></div>
+    <div class="strip" id="strip">
+      <figure><img src="img/parmigiana.webp" alt="Parmigiana di melanzane" loading="lazy"><figcaption>La parmigiana</figcaption></figure>
+      <figure><img src="img/ragu.webp" alt="Pasta al ragù" loading="lazy"><figcaption>La pasta di mamma</figcaption></figure>
+      <figure><img src="img/antipasti.webp" alt="Bruschette al pomodoro" loading="lazy"><figcaption>Per cominciare</figcaption></figure>
+      <figure><img src="img/primi.webp" alt="Pasta al pomodoro" loading="lazy"><figcaption>I primi</figcaption></figure>
+      <figure><img src="img/pasta.webp" alt="Pasta fresca condita" loading="lazy"><figcaption>Piatti del giorno</figcaption></figure>
+      <figure><img src="img/dolce.webp" alt="Dolce della casa" loading="lazy"><figcaption>I dolci</figcaption></figure>
+      <figure><img src="img/vino.webp" alt="Calici di vino rosso" loading="lazy"><figcaption>Il rosso della casa</figcaption></figure>
+    </div>
+    <div class="arrows"><button id="prev" aria-label="Foto precedente">←</button><button id="next" aria-label="Foto successiva">→</button></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">Dicono di noi</span><h2>Più di 1.700 recensioni</h2><p>Cosa raccontano, in sintesi, gli ospiti su Google e Tripadvisor.</p></div>
+    <div class="revs">
+      <div class="rev rv"><div class="stars">★★★★★</div><h3>La musica</h3><p>Il chitarrista che canta tra i tavoli è il ricordo più citato: per molte coppie è stata la cena più romantica del viaggio.</p><small>Tema ricorrente · Google e Tripadvisor</small></div>
+      <div class="rev rv"><div class="stars">★★★★★</div><h3>Il sapore di casa</h3><p>Polpette, parmigiana, gnocchi e scarpariello: piatti semplici e saporiti, con un vino della casa che convince e un calice abbondante.</p><small>Tema ricorrente · Google e Tripadvisor</small></div>
+      <div class="rev rv"><div class="stars">★★★★★</div><h3>L'accoglienza</h3><p>Servizio veloce e gentile, prezzi onesti rispetto alla zona. Lo staff fa di tutto per farsi capire anche da chi non parla italiano.</p><small>Tema ricorrente · Google e Tripadvisor</small></div>
+    </div>
+    <div class="world rv"><b>La sera è spesso tutto pieno:</b><span>meglio prenotare</span><span>ospiti da tutto il mondo</span><span>pranzo più tranquillo</span></div>
+  </div>
+</section>
+
+<section class="info" id="orari">
+  <div class="wrap grid">
+    <div class="card rv">
+      <h2>Orari</h2>
+      <div class="status"><span class="dot" id="dot"></span><span id="stxt">…</span></div>
+      <table id="hours"></table>
+      <p class="muted" style="margin-top:14px">Orari della scheda Google, da confermare.</p>
+    </div>
+    <div class="card rv">
+      <h2>Dove siamo</h2>
+      <p class="addr">Via Giovanni Ruggi d'Aragona 19 · 84121 Salerno</p>
+      <p class="muted">Nel centro storico, in una traversa a pochi passi dal corso e dal lungomare.</p>
+      <p class="addr" style="margin-top:18px">+39 345 605 7050</p>
+      <div class="map">Mappa interattiva nel sito definitivo</div>
+      <a class="btn btn-terra" href="https://www.google.com/maps/search/?api=1&query=La+Traversa+Via+Giovanni+Ruggi+D%27Aragona+19+Salerno">Apri in Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<section id="prenota">
+  <div class="wrap book">
+    <div class="rv">
+      <span class="eyebrow">Prenotazioni</span>
+      <h2 style="font-size:clamp(2.3rem,4.6vw,3.6rem);margin:12px 0 18px">Un tavolo<br>nella traversa.</h2>
+      <p style="color:var(--ink-2)">La sera i posti finiscono presto: conviene prenotare. Compilate il modulo e la richiesta parte su WhatsApp. Vi rispondiamo noi per confermare.</p>
+      <p style="margin-top:18px;color:var(--ink-2)">Preferite chiamare? <b>+39 345 605 7050</b></p>
+    </div>
+    <form id="f" class="rv" novalidate>
+      <label>Nome<input name="nome" required autocomplete="name"></label>
+      <label>Persone<select name="pax"><option>2</option><option>1</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8+</option></select></label>
+      <label>Giorno<input type="date" name="data" required></label>
+      <label>Turno<select name="turno"><option>Pranzo · 12:30</option><option>Pranzo · 13:00</option><option>Pranzo · 13:30</option><option>Cena · 19:30</option><option>Cena · 20:00</option><option>Cena · 20:30</option><option>Cena · 21:00</option></select></label>
+      <label class="full">Note (allergie, senza glutine, occasioni speciali)<textarea name="note" rows="3"></textarea></label>
+      <div class="msg" id="msg"></div>
+      <button class="btn btn-terra full" type="submit" style="justify-content:center">Invia la richiesta su WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>La Traversa</b><br>Via Giovanni Ruggi d'Aragona 19, 84121 Salerno · +39 345 605 7050<br>P.IVA da inserire</div>
+    <div>Privacy · Cookie<br>Sito in anteprima</div>
+  </div>
+</footer>
+
+<div class="mbar"><a class="btn call" href="tel:+393456057050">Chiama</a><a class="btn btn-terra" href="#prenota">Prenota</a></div>
+
+<script>
+const PHONE='393456057050';
+// orari (fonte: scheda Google 23/11/2026, da confermare col titolare) — [apertura, chiusura] in minuti
+const H={1:[],2:[[540,1290]],3:[[540,1290]],4:[[540,1290]],5:[[540,1290]],6:[[540,1290]],0:[[540,930]]};
+const DN=['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
+const f=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+const now=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Rome'}));
+const d=now.getDay(),mins=now.getHours()*60+now.getMinutes();
+let rows='';[1,2,3,4,5,6,0].forEach(k=>{rows+=`<tr class="${k===d?'today':''}"><td>${DN[k]}</td><td>${H[k].length?H[k].map(r=>f(r[0])+'–'+f(r[1])).join(' · '):'Chiuso'}</td></tr>`});
+document.getElementById('hours').innerHTML=rows;
+const open=H[d].some(r=>mins>=r[0]&&mins<r[1]);
+const next=H[d].find(r=>mins<r[0]);
+function nextOpen(){for(let i=1;i<=7;i++){const k=(d+i)%7;if(H[k].length)return (i===1?'domani':DN[k].toLowerCase())+' alle '+f(H[k][0][0])}return ''}
+document.getElementById('dot').className='dot '+(open?'open':'closed');
+document.getElementById('stxt').textContent=open?'Aperto ora':(next?'Chiuso · apre alle '+f(next[0]):'Chiuso · riapre '+nextOpen());
+
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected','false'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  t.setAttribute('aria-selected','true');document.getElementById(t.dataset.p).classList.add('on');
+});
+
+const s=document.getElementById('strip');
+const step=dir=>s.scrollBy({left:dir*(s.querySelector('figure').offsetWidth+16),behavior:'smooth'});
+document.getElementById('prev').onclick=()=>step(-1);document.getElementById('next').onclick=()=>step(1);
+s.tabIndex=0;s.addEventListener('keydown',e=>{if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// prenotazione -> WhatsApp (lunedì chiuso, domenica solo pranzo)
+const form=document.getElementById('f'),msg=document.getElementById('msg');
+form.data.min=new Date().toISOString().slice(0,10);
+form.addEventListener('submit',e=>{
+  e.preventDefault();msg.className='msg';
+  if(!form.nome.value.trim()||!form.data.value){msg.className='msg err';msg.textContent='Inserite nome e giorno.';return}
+  const dt=new Date(form.data.value+'T12:00');const wd=dt.getDay();
+  if(wd===1){msg.className='msg err';msg.textContent='Il lunedì la trattoria è chiusa. Scegliete un altro giorno.';return}
+  if(wd===0&&form.turno.value.startsWith('Cena')){msg.className='msg err';msg.textContent='La domenica siamo aperti solo a pranzo.';return}
+  const txt=`Buongiorno, vorrei prenotare a La Traversa.\nNome: ${form.nome.value.trim()}\nPersone: ${form.pax.value}\nGiorno: ${dt.toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long'})}\nTurno: ${form.turno.value}`+(form.note.value.trim()?`\nNote: ${form.note.value.trim()}`:'');
+  const url='https://wa.me/'+PHONE+'?text='+encodeURIComponent(txt);
+  msg.className='msg ok';msg.innerHTML='Richiesta pronta. Se WhatsApp non si apre, <a href="'+url+'">toccate qui</a> oppure chiamate il +39 345 605 7050. La prenotazione è valida solo dopo la nostra conferma.';
+  try{window.open(url,'_blank')}catch(_){}
+});
+</script>
+</body>
+</html>
